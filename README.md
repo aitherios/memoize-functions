@@ -3,14 +3,14 @@
 [![dependency status](https://img.shields.io/david/team-767/memoize-functions.svg?style=flat-square)](https://david-dm.org/team-767/memoize-functions)
 [![build status](https://img.shields.io/travis/team-767/memoize-functions.svg?style=flat-square)](https://travis-ci.org/team-767/memoize-functions)
 
-Alter/mutate received object replacing it's functions with a memoized version.
+Create a new object replacing functions with memoized versions.
 
 ## Usage
 
 ```js
 import memoizeFunctions from 'memoize-functions'
 
-const obj = {
+let obj = {
   info: () =>
     ({ output: 'I beg your pardon' }),
   log: (message = 'Howdy o/') =>
@@ -21,7 +21,7 @@ const obj = {
     ({ output: 'String' }),
 }
 
-memoizeFunctions(obj)
+newObj = memoizeFunctions(obj)
 ```
 
 Then attributes `info`, `log` and `warn` are replaced by memoized versions
@@ -31,7 +31,7 @@ Attribute `text` is kept the same, only functions are mutated.
 You can also specify which functions should be mutated:
 
 ```js
-memoizeFunctions(obj, 'log', 'warn')
+obj = memoizeFunctions(obj, 'log', 'warn')
 
 obj.log() === obj.log()
 obj.info() !== obj.info()

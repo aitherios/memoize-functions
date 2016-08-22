@@ -1,3 +1,3 @@
-const memoizeFunctions = (obj) => obj
+const memoizeFunctions = (obj) => Object.assign({}, obj)
 
 export default memoizeFunctions

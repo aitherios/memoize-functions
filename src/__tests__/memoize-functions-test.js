@@ -1,6 +1,7 @@
+import memoizeFunctions from '../memoize-functions'
+
 jest.unmock('../memoize-functions')
 
-import memoizeFunctions from '../memoize-functions'
 
 describe('memoizeFunctions()', () => {
   let subject
@@ -18,7 +19,8 @@ describe('memoizeFunctions()', () => {
     }
   })
 
-  it('returns the same object', () => {
-    expect(subject).toBe(memoizeFunctions(subject))
+  it('returns a new object', () => {
+    expect(subject).not.toBe(memoizeFunctions(subject))
+    expect(subject.text.output).toBe(memoizeFunctions(subject).text.output)
   })
 })
