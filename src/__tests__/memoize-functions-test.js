@@ -37,6 +37,10 @@ describe('memoizeFunctions()', () => {
       expect(subject.log()).toBe(subject.log())
       expect(subject.warn()).toBe(subject.warn())
     })
+
+    it('memoizes function with deconstruct parameters', () => {
+      expect(subject.warn({ message: 'Yo!' })).toBe(subject.warn({ message: 'Yo!' }))
+    })
   })
 
   describe('when called specifying attributes to be memoized', () => {

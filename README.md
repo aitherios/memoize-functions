@@ -25,7 +25,7 @@ let newObj = memoizeFunctions(obj)
 
 newObj.log() === newObj.log()
 newObj.warn() === newObj.warn()
-newObj.info() === newObj.info()
+newObj.info({ message: 'Yo!' }) === newObj.info({ message: 'Yo!' })
 newObj.text === newObj.text
 ```
 
@@ -40,7 +40,7 @@ newObj = memoizeFunctions(obj, 'log', 'warn')
 
 newObj.log() === newObj.log()
 newObj.warn() === newObj.warn()
-newObj.info() !== newObj.info()
+newObj.info({ message: 'Yo!' }) !== newObj.info({ message: 'Yo!' })
 newObj.text === newObj.text
 ```
 
