@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/team-767/memoize-functions#readme",
   "dependencies": {
+    "memoizee": "^0.4.1"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
