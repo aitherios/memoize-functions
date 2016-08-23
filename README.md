@@ -22,22 +22,29 @@ let obj = {
 }
 
 let newObj = memoizeFunctions(obj)
+
+newObj.log() === newObj.log()
+newObj.warn() === newObj.warn()
+newObj.info() === newObj.info()
+newObj.text === newObj.text
 ```
 
 Then attributes `info`, `log` and `warn` are replaced by memoized versions
 (it supports destructured parameters).
-Attribute `text` is kept the same, only functions are mutated.
+Attribute `text` is kept the same, only functions are memoized.
 
-You can also specify which functions should be mutated:
+You can also choose which functions should be memoized:
 
 ```js
 newObj = memoizeFunctions(obj, 'log', 'warn')
 
 newObj.log() === newObj.log()
+newObj.warn() === newObj.warn()
 newObj.info() !== newObj.info()
+newObj.text === newObj.text
 ```
 
-Then the attribute `log` and `warn` is replaced with a memoized version but `info` is kept the same.
+The attribute `log` and `warn` are memoized but `info` is kept the same.
 
 ## Contributing
 
