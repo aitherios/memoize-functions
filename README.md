@@ -21,7 +21,7 @@ let obj = {
     ({ output: 'String' }),
 }
 
-newObj = memoizeFunctions(obj)
+let newObj = memoizeFunctions(obj)
 ```
 
 Then attributes `info`, `log` and `warn` are replaced by memoized versions
@@ -31,10 +31,10 @@ Attribute `text` is kept the same, only functions are mutated.
 You can also specify which functions should be mutated:
 
 ```js
-obj = memoizeFunctions(obj, 'log', 'warn')
+newObj = memoizeFunctions(obj, 'log', 'warn')
 
-obj.log() === obj.log()
-obj.info() !== obj.info()
+newObj.log() === newObj.log()
+newObj.info() !== newObj.info()
 ```
 
 Then the attribute `log` and `warn` is replaced with a memoized version but `info` is kept the same.
