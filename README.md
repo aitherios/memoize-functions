@@ -3,7 +3,7 @@
 [![dependency status](https://img.shields.io/david/team-767/memoize-functions.svg?style=flat-square)](https://david-dm.org/team-767/memoize-functions)
 [![build status](https://img.shields.io/travis/team-767/memoize-functions.svg?style=flat-square)](https://travis-ci.org/team-767/memoize-functions)
 
-Create a new object replacing functions with memoized versions.
+Create a new object replacing functions with memoized versions
 
 ## Usage
 

@@ -1,4 +1,4 @@
-Copyright (c) 2016, Team 767
+Copyright (c) 2016, Renan Mendes Carvalho <aitherios@gmail.com>
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above

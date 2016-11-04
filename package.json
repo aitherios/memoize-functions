@@ -23,8 +23,8 @@
     "isomorphic",
     "inline-style"
   ],
-  "author": "Team Magneto",
-  "license": "ISC",
+  "author": "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/team-767/memoize-functions/issues"
   },
@@ -69,5 +69,11 @@
       "semi": 0,
       "new-cap": 0
     }
-  }
+  },
+  "maintainers": [
+    "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)"
+  ],
+  "contributors": [
+    "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)"
+  ]
 }
