@@ -7,7 +7,6 @@
     "test": "jest",
     "clean": "rm -rf dist",
     "transpile": "babel src -D -d dist --ignore '__tests__'",
-    "bundle": "webpack --config webpack.config.js",
     "build": "npm run lint && npm run clean && npm run transpile && npm run bundle",
     "lint": "eslint ./src",
     "preversion": "npm test && npm run build",
@@ -38,22 +37,23 @@
     "babel-eslint": "^6.0.4",
     "babel-jest": "^14.0.0",
     "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-stage-0": "^6.5.0",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
     "eslint": "^3.3.1",
     "eslint-config-airbnb": "^10.0.1",
     "eslint-plugin-import": "^1.7.0",
     "eslint-plugin-jsx-a11y": "^2.1.0",
-    "jest-cli": "^14.0.0",
-    "webpack": "^1.13.1"
+    "jest-cli": "^14.0.0"
   },
   "jest": {
     "rootDir": "./src"
   },
   "babel": {
     "presets": [
-      "es2015",
-      "stage-0"
+      "latest"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
     ]
   },
   "eslintConfig": {
